@@ -1,0 +1,14 @@
+---
+- name: Ensure capistrano needed folders exists
+  file:
+    path: "{{ repo_path }}/{{ item }}"
+    owner: "{{ owner }}"
+    group: "{{ group }}"
+    mode: 0755
+  with_items: "{{ cap_default_folders }}"
+
+- name: Ensure stage YAML files exists in settings folder
+  file:
+    src: "{{ item }}"
+    dest: "{{ repo_path }}/config/settings/{{ item }}.yml"
+  with_items: "{{ cap_default_files }}"
