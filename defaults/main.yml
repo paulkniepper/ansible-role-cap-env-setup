@@ -1,0 +1,14 @@
+---
+cap_default_folders:
+- 'lib/capistrano'
+- 'lib/capistrano/tasks'
+- 'lib/capistrano/templates'
+- 'config/deploy'
+- 'config/settings'
+
+cap_default_files:
+- 'config/deploy.rb'
+- 'config/deploy/staging.rb'
+- 'config/deploy/production.rb'
+- 'config/settings/staging.yml'
+- 'config/settings/production.yml'
